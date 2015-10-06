@@ -1,0 +1,6 @@
+library(dplyr)
+NEI <- readRDS("summarySCC_PM25.rds")
+NEI <- summarize(group_by(NEI, year), Emissions=sum(Emissions))
+with(NEI, plot(year, log(Emissions), type="h", lwd=5, col="red", xlab="Years", ylab="log(PM2.5) in Tons", main="PM2.5 Emissions" ))
+dev.copy(png, file="plot1.png")
+dev.off()

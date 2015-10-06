@@ -1,0 +1,11 @@
+library(dplyr)
+library(ggplot2)
+png("plot3.png", width=1024, height=720)
+NEI <- readRDS("summarySCC_PM25.rds")
+NEI <- filter(NEI, fips == "24510")
+NEI <- summarize(group_by(NEI, type, year), Emissions=sum(Emissions))
+NEI_Plot <- ggplot(NEI, aes(year, Emissions))
+NEI_Plot + geom_point(aes(color = type)) + geom_smooth(method = "lm") + facet_grid(.~type) +
+      xlab("Years") + ylab("PM2.5 Emission") + ggtitle("PM2.5 Emission vs Years for Each Type")
+dev.copy(png, file="plot3.png")
+dev.off()

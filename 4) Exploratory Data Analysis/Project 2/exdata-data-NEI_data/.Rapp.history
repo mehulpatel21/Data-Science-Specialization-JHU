@@ -1,0 +1,276 @@
+qplot(displ, hwy, data=mpg, facets=.~drv)
+str(maacs)
+install.packages("MAACS")
+library(nlme)
+library(lattice)
+xyplot(weight ~ Time | Diet, BodyWeight)
+?trellis.par.set
+library(datasets)
+data(airquality)
+airquality = transform(airquality, Month = factor(Month))
+qplot(Wind, Ozone, data = airquality, facets = .~Month)
+library(ggplot2)
+install.packages("ggplot2")
+library(datasets)
+data(airquality)
+airquality = transform(airquality, Month = factor(Month))
+qplot(Wind, Ozone, data = airquality, facets = .~Month)
+library(ggplot2)
+qplot(Wind, Ozone, data = airquality, facets = .~Month)
+library(ggplot2)
+library(datasets)
+data(movies)
+g <- ggplot(movies, aes(votes, rating))
+print(g)
+qplot(votes, rating, data = movies)
+qplot(votes, rating, data = movies, smooth = "loess")
+qplot(votes, rating, data = movies) + geom_smooth()
+?points
+?text
+?axis
+?lines
+?panel.abline
+library(swirl)
+ls()
+rm(list=ls())
+install_from_swirl("Exploratory Data Analysis")
+install.packages("rgl")
+install.packages("ggvis")
+install.packages("maps")
+install.packages("quantmod")
+install.packages("data.table")
+install.packages("RODBC")
+install.packages("RMySQL")
+install.packages("RPostgressSQL")
+install.packages("RSQLite")
+install.packages("Rcpp")
+install.packages("ggmap")
+install.packages("nlme")
+install.packages("htmlwidgets")
+install.packages("grDevices")
+install.packages("colorRamp")
+install.packages("grDevices")
+install.packages("RColorBrewer")
+?grDevices
+?kclut
+?kmeans
+library(help = kmeans)
+library(help = "kmeans")
+install.packages("stats")
+install.packages("cluster")
+install.packages("fastcluster")
+install.packages("stats")
+help("datasets")
+library(help = "datasets")
+install.packages("MASS")
+install.packages("phones")
+ls()
+library(swirl)
+ls()
+rm(list=ls())
+ls()
+swirl()
+library(swirl)
+swirl()
+head(EPA)
+head(pollution)
+dim(pollution)
+summary(pollution$pm25)
+quantile(ppm)
+boxplot(ppm, col="blue")
+abline(h=12)
+hist(ppm, col="green")
+rug(ppm)
+low
+high
+hist(ppm, col="green", breaks=100)
+rug(ppm)
+hist(ppm, col="green")
+abline(v=12)
+abline(v=12, lwd=2)
+abline(v=median(ppm), col="magneta", lwd=4)
+abline(v=median(ppm), col="magenta", lwd=4)
+names(pollution)
+reg <- table(pollution$region)
+reg
+barplot(reg, col="wheat", main="Number of Counties in Each Region")
+?boxplot
+boxplot(pm25~region, data=pollution, col="red")
+par(mfrow=c(2,1), mar=c(4,4,2,1))
+exit()
+quit()
+library(swirl)
+swirl()
+par(mfrow=c(2,1), mar=c(4,4,2,1))
+east <- subset(pollution, region=="east")
+head(east)
+hist(east$pm25, col="green")
+hist(subset(pollution$pm25, region=="west", col="green")
+)
+hist(subset(pollution$pm25, pollution$region=="west"), col="green")
+hist(subset(pollution, region=="west")$pm25, col="green")
+with(pollution, plot(lattitude, pm25))
+with(pollution, plot(latitude, pm25))
+abline(h=12, lwd=2, lty=2)
+abline(h=12, lwd=2, lty=3)
+plot(pollution$latitude, ppm, col = pollution$region)
+abline(h=12, lwd=2, lty=2)
+par(mfrow=c(1,2), mar=c(5,4,2,1))
+west <- subset(pollution, region=="west")
+plot(west$latitude, west$pm23, main="West")
+plot(west$latitude, west$pm25, main="West")
+plot(east$latitude, east$pm25, main="East")
+head(cars)
+with(cars, plot(speed, dist))
+text(mean(cars$speed), max(cars$dist), "SWIRL rules!")
+head(state)
+table(state$region)
+xyplot(Life.Exp ~ Income | region, data = state, layout = c(4,1))
+xyplot(Life.Exp ~ Income | region, data = state, layout = c(2,2))
+head(mpg)
+dim(mpg)
+table(mpg$model)
+qplot(displ, hwy, data=mpg)
+qplot(displ, hwy, data="mpg")
+qplot(displ, hwy, data=mpg)
+xyplot(Life.Exp ~ Income | region, data = state, layout = c(4,1))
+qplot(displ, hwy, data=mpg)
+switl()
+swirl()
+qplot(displ, hwy, data=mpg)
+panel()
+?panel
+qplot(displ, hwy, data=mpg, layout= c(2,2))
+swirl()
+qplot(displ, hwy, data=mpg)
+quit(())
+quit()
+library(swirl)
+swirl()
+qplot(displ, hwy, data=mpg)
+PANEL
+?PANEL
+qplot(displ, hwy, data=mpg)
+rm(list=ls())
+ls()
+library(swirl)
+swirl()
+head(airquality)
+range(airquality$Ozone, na.rm=TRUE)
+hist(airquality$Ozone)
+table(airquality$Month)
+?grep
+setwd("~/Documents/Coursera/Data Science - JHU/Exploratory Data Analysis/Project 2/exdata-data-NEI_data")
+NEI <- readRDS("summarySCC_PM25.rds")
+SCC <- readRDS("Source_Classification_Code.rds")
+VIew(SCC)
+View(SCC)
+search <- grep(c("Coal", "Combustion", Comb), SCC[,4])
+search <- grep(c("Coal", "Combustion", "Comb"), SCC[,4])
+search <- grep("Coal", SCC[,4])
+head(serach)
+head(search)
+summary(search)
+grep("Coal", SCC[,
+4])
+combustion <- grepl("comb", SCC$SCC.Level.One, ignore.case = TRUE)
+coal <- grepl("coal", SCC$SCC.Level.Four, ignore.case=TRUE)
+coalComb <- (combustion & coal)
+combSCC <- SCC[coalComb, ]$SCC
+combNEI <- NEI[NEI$SCC %in% combSCC,]
+png("plot4.png", width=480, units="px", bg="transparent")
+library(ggplot2)
+plot <- ggplot(combNEI, aes(factor(year), Emissions/10^5)) + geom_bar(stat="identity", fill="grey", width=0.75) + theme_bw() + guides(fill=FALSE) + labs(x="Year", y=expression("Total PM"[2.5]*" Emission (10^5 Tons) )) + labs(title=expression("PM"[2.5]*" Coal Combustion Source Emissions in US 1999-2008"))
+plot <- ggplot(combNEI, aes(factor(year), Emissions/10^5)) + geom_bar(stat="identity", fill="grey", width=0.75) + theme_bw() + guides(fill=FALSE)
+plot + labs(x="Year", y="Total PM2.5 Emission (10^5 Tons)") + labs(titel = "PM2.5 Coal Combustion Source Emissions in the US from 1999-2008")
+g <- plot + labs(x="Year", y="Total PM2.5 Emission (10^5 Tons)") + labs(titel = "PM2.5 Coal Combustion Source Emissions in the US from 1999-2008")
+print(g)
+dev.off()
+png("plot4.png", width=480, units="px", bg="transparent")
+png("plot4.png", width=480, units="px", bg="transparent")
+plot <- ggplot(combNEI, aes(factor(year), Emissions/10^5)) + geom_bar(stat="identity", fill="grey", width=0.75) +#
+      theme_bw() + guides(fill=FALSE) + labs(x="Year", y="Total PM2.5 Emission (10^5 Tons)")#
+      + labs(title= "PM2.5 Coal Combustion Source Emissions in US 1999-2008")
+plot <- ggplot(combNEI, aes(factor(year), Emissions/10^5)) + geom_bar(stat="identity", fill="grey", width=0.75) + theme_bw() + guides(fill=FALSE)
+plot + labs(x="Year", y="Total PM2.5 Emission (10^5 Tons)") + labs(title = "PM2.5 Coal Combustion Source Emissions in the US from 1999-2008")
+g <- plot + labs(x="Year", y="Total PM2.5 Emission (10^5 Tons)") + labs(title = "PM2.5 Coal Combustion Source Emissions in the US from 1999-2008")
+print(g)
+dev.off()
+vehicles <- grepl("vehicle", SCC$SCC.Level.Two, ignore.case=TRUE)
+vehiclesSCC <- SCC[vehicles,]$SCC
+vehiclesNEI <- NEI[NEI$SCC %in% vehiclesSCC,]
+baltimoreVehiclesNEI <- vehiclesNEI[vehiclesNEI$fips=="24510",]
+png("plot5.png",width=480,height=480,units="px",bg="transparent")
+ggp <- ggplot(baltimoreVehiclesNEI,aes(factor(year),Emissions)) +#
+      +  geom_bar(stat="identity",fill="grey",width=0.75) +#
+      +  theme_bw() +  guides(fill=FALSE) +#
+      +  labs(x="year", y=expression("Total PM"[2.5]*" Emission (10^5 Tons)")) +#
+      +  labs(title=expression("PM"[2.5]*" Motor Vehicle Source Emissions in Baltimore from 1999-2008"))
+library(ggplot2)
+ggp <- ggplot(baltimoreVehiclesNEI,aes(factor(year),Emissions)) +#
+      +  geom_bar(stat="identity",fill="grey",width=0.75) +#
+      +  theme_bw() +  guides(fill=FALSE) +#
+      +  labs(x="year", y=expression("Total PM"[2.5]*" Emission (10^5 Tons)")) +#
+      +  labs(title=expression("PM"[2.5]*" Motor Vehicle Source Emissions in Baltimore from 1999-2008"))
+ggp <- ggplot(baltimoreVehiclesNEI,aes(factor(year),Emissions)) +#
+      +  geom_bar(stat="identity",fill="grey",width=0.75) +#
+      +  theme_bw() +  guides(fill=FALSE)
+g <- ggplot(baltimoreVehiclesNEI,aes(factor(year),Emissions)) + geom_bar(stat="identity", fill="grey", width=1.00) + theme_bw() + guides(fill=FALSE)
+ggp <- g +  labs(x="year", y=expression("Total PM"[2.5]*" Emission (10^5 Tons)")) +#
+      +  labs(title=expression("PM"[2.5]*" Motor Vehicle Source Emissions in Baltimore from 1999-2008"))
+ggp <- g +  labs(x = "year", y = "Total PM2.5 Emission (10^5 Tons)") + labs(title = "PM2.5 Motor Vehicle Source Emissions in Baltimore from 1999-2008")
+print(ggp)
+dev.off()
+g <- ggplot(baltimoreVehiclesNEI,aes(factor(year),Emissions)) + geom_bar(stat="identity", fill="grey", width=0.50) + theme_bw() + guides(fill=FALSE)
+ggp <- g +  labs(x = "year", y = "Total PM2.5 Emission (10^5 Tons)") + labs(title = "PM2.5 Motor Vehicle Source Emissions in Baltimore from 1999-2008")
+print(ggp)
+dev.off()
+png("plot5.png",width=480,height=480,units="px",bg="transparent")
+g <- ggplot(baltimoreVehiclesNEI,aes(factor(year),Emissions)) + geom_bar(stat="identity", fill="grey", width=0.50) + theme_bw() + guides(fill=FALSE)
+ggp <- g +  labs(x = "year", y = "Total PM2.5 Emission (10^5 Tons)") + labs(title = "PM2.5 Motor Vehicle Source Emissions in Baltimore from 1999-2008")
+print(ggp)
+dev.off()
+NEI <- readRDS("summarySCC_PM25.rds")
+SCC <- readRDS("Source_Classification_Code.rds")
+vehicles <- grepl("vehicle", SCC$SCC.Level.Two, ignore.case=TRUE)
+vehiclesSCC <- SCC[vehicles,]$SCC
+vehiclesNEI <- NEI[NEI$SCC %in% vehiclesSCC,]
+vehiclesBaltimoreNEI <- vehiclesNEI[vehiclesNEI$fips=="24510",]
+vehiclesBaltimoreNEI$city <- "Baltimore City"
+vehiclesLANEI <- vehiclesNEI[vehiclesNEI$fips=="06037",]
+vehiclesLANEI$city <- "Los Angeles County"
+LABalNEI <- rbind(vehiclesBaltimoreNEI,vehiclesLANEI)
+png("plot6.png",width=480,height=480,units="px",bg="transparent")
+ggp <- ggplot(LABalNEI, aes(x=year, y=Emissions, fill=city))#
+      + geom_bar(aes(fill=year),stat="identity")#
+      + facet_grid(scales="free", space="free", .~city)#
+      + guides(fill=FALSE) + theme_bw()#
+      + labs(x="year", y="Total PM2.5 Emission (Kilo-Tons)")#
+      + labs(title="PM2.5 Motor Vehicle Source Emissions in Baltimore & LA 1999-2008")
+ggp <- ggplot(LABalNEI, aes(x=year, y=Emissions, fill=city))#
+      + geom_bar(aes(fill=year),stat="identity")#
+      + facet_grid(scales="free", space="free", .~city)#
+      + guides(fill=FALSE) + theme_bw()
+library(ggplot2)
+ggp <- ggplot(LABalNEI, aes(x=year, y=Emissions, fill=city))#
+      + geom_bar(aes(fill=year),stat="identity")#
+      + facet_grid(scales="free", space="free", .~city)#
+      + guides(fill=FALSE) + theme_bw()#
+      + labs(x="year", y="Total PM2.5 Emission (Kilo-Tons)")#
+      + labs(title="PM2.5 Motor Vehicle Source Emissions in Baltimore & LA 1999-2008")
+ggp <- ggplot(LABalNEI, aes(x=year, y=Emissions, fill=city)) + geom_bar(stat="identity", aes(fill=year)) +facet_grid(scales="free", space="free", ~.city) +guides(fill=FALSE) + theme_bw()
+g <- ggp + labs(x="year", y="Total PM2.5 Emission (Kilo-Tons)") + labs(title = "PM2.5 Motor Vehicle Source Emissions in Baltimore & LA 1999-2008")
+print(g)
+ggp <- ggplot(LABalNEI, aes(x=year, y=Emissions, fill=city)) + geom_bar(stat="identity", aes(fill=year)) +facet_grid(scales="free", space="free", ~.city) +guides(fill=FALSE) + theme_bw()
+ggp <- ggplot(LABalNEI, aes(x=year, y=Emissions, fill=city)) + geom_bar(stat="identity", aes(fill=year)) +facet_grid(scales="free", space="free", ~.city) +guides(fill=FALSE) + theme_bw() + labs(x="year", y="Total PM2.5 Emission (Kilo-Tons)") + labs(title="PM2.5 Motor Vehicle Source Emissions in Baltimore & LA 1999-2008")
+print(ggp)
+dev.off()
+library(ggplot2)
+png("plot6.png",width=480,height=480,units="px",bg="transparent")
+ggp <- ggplot(LABalNEI, aes(x=year, y=Emissions, fill=city)) + geom_bar(stat="identity", aes(fill=year)) +facet_grid(scales="free", space="free", ~.city) +guides(fill=FALSE) + theme_bw()
+print(ggp)
+ggp <- ggplot(LABalNEI, aes(x=year, y=Emissions, fill=city)) + geom_bar(stat="identity", aes(fill=year)) +facet(scales="free", space="free", ~.city) +guides(fill=FALSE) + theme_bw()
+print(ggp)
+ggp <- ggplot(LABalNEI, aes(x=year, y=Emissions, fill=city)) + geom_bar(stat="identity", aes(fill=year)) +facet_grid(scales="free", space="free", ~.city) +guides(fill=FALSE) + theme_bw()
+ggp <- ggplot(LABalNEI, aes(x=factor(year), y=Emissions, fill=city)) + geom_bar(stat="identity", aes(fill=year)) +facet_grid(scales="free", space="free", ~.city) +guides(fill=FALSE) + theme_bw()
+print(ggp)
