@@ -2,7 +2,7 @@
 title: "Practical Machine Learning Project (Coursera) - Quantified Data Analysis"
 author: "Mehul Patel"
 date: "September 27, 2015"
-output: html_document
+output: pdf_document
 ---
 
 Introduction
