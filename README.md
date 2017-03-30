@@ -5,7 +5,7 @@ Please note that it contains answers to all projects so I'd suggest doing all yo
 In case you can't do it even after trying multiple times, you can refer to this repo.
 
 It's not my responsibility if you copy all the projects and get caught in case of plagiarism.
-This repo is soley for reference purposes.
+This repo is for reference purposes only.
 
 
 
